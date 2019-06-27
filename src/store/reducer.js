@@ -4,7 +4,8 @@ const initialState = {
   //sports: {results: {}},
   sports: null,
   politics: null,
-  world: null
+  world: null,
+  story: null
 }
 const reducer = (state = initialState, action) => {
 
@@ -25,6 +26,12 @@ const reducer = (state = initialState, action) => {
     return {
       ...state, world: action.world.response.results
     }
+  case actionTypes.UPDATE_STORY:
+  
+      return {
+        ...state, story: action.story.response
+      }
+
   default: return initialState;
   }
 }

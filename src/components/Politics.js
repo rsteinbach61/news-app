@@ -1,4 +1,5 @@
 import React from 'react';
+//import { Link } from 'react-router-dom';
 
 function Politics(props){
 console.log(process.env.API_KEY)
@@ -9,9 +10,9 @@ console.log(process.env.API_KEY)
 
   return(
     <div>
-
       {list}
     </div>
+
   )
 }
 export default Politics;
