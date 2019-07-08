@@ -10,18 +10,23 @@ class PoliticsContainer extends Component {
     this.props.updatePolitics()
   }
   render(){
-    return(
-      <div><h1 className="title">Politics</h1>
+    if(this.props.show){
+      return(
+        <div><h1 className="title">Politics</h1>
 
-        <Politics politics={this.props.politics}/>
-      </div>
-    )
+          <Politics politics={this.props.politics}/>
+        </div>
+      )
+    } else {
+      return null;
+    }
   }
 }
 
 const mapStateToProps = state => {
   return {
-    politics: state.politics
+    politics: state.politics,
+    show: state.show //show gets updated to false by reducer when a story link is clicked
   }
   };
 

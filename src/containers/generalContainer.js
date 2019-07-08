@@ -10,18 +10,23 @@ class GeneralContainer extends Component {
   }
 
   render(){
-    return(
-      <div><h1 className="title">World</h1>
+    if(this.props.show){
+      return(
+        <div><h1 className="title">World</h1>
 
-        <General world={this.props.world}/>
-      </div>
-    )
+          <General world={this.props.world}/>
+        </div>
+      )
+    } else {
+      return null;
+    }
   }
 }
 
 const mapStateToProps = state => {
   return {
-    world: state.world
+    world: state.world,
+    show: state.show //show gets updated to false by reducer when a story link is clicked
   }
   };
 
