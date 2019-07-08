@@ -47,7 +47,7 @@ export function loadWorld(){
 export function loadStory(apiUrl){
 
   return function(dispatch) {
-    const url = apiUrl + "?&show-fields=bodyText&api-key=" + process.env.REACT_APP_API_KEY
+    const url = apiUrl + "?show-fields=all&api-key=" + process.env.REACT_APP_API_KEY
     return getSports(url).then(story => {
       dispatch(loadStorySuccess(story))
     })
