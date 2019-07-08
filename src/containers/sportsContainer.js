@@ -12,20 +12,25 @@ class SportsContainer extends Component {
     this.props.updateSports()
   }
   render(){
+    //conditional to hide Sports component when displaying text of story.
+    if(this.props.show){
+      return(
+        <div >
+          <h1 className="title">Sports</h1>
 
-    return(
-      <div >
-        <h1 className="title">Sports</h1>
-
-        <Sports sports={this.props.sports} />
-      </div>
-    )
+          <Sports sports={this.props.sports} />
+        </div>
+      )
+    } else {
+      return null; //null means Sports component won't display
+    }
   }
 }
 
 const mapStateToProps = state => {
   return {
-    sports: state.sports
+    sports: state.sports,
+    show: state.show //show gets updated to false by reducer when a story link is clicked
     }
   };
 
