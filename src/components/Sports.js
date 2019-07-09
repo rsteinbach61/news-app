@@ -21,7 +21,7 @@ if(props.sports){
   }
 
   return(
-    <div>
+    <div className="newsbox">
       {listLink}
     </div>
   )

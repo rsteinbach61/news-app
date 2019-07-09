@@ -20,7 +20,7 @@ function General(props){
     }
 
   return(
-    <div>
+    <div className="newsbox">
 
       {listLink}
     </div>

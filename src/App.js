@@ -14,9 +14,9 @@ function App() {
     <Router>
     <div className="App">
       <Route exact path="/story/:id" component={storyContainer} />
-      <div className="newsbox">< PoliticsContainer/></div>
-      <div className="newsbox">< GeneralContainer/></div>
-      <div className="newsbox">< SportsContainer/></div>
+      <div>< PoliticsContainer/></div>
+      <div>< GeneralContainer/></div>
+      <div>< SportsContainer/></div>
     </div>
 
   </Router>
