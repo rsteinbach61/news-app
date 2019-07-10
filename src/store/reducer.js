@@ -15,7 +15,6 @@ const reducer = (state = initialState, action) => {
   case actionTypes.UPDATE_SPORTS:
 
     return {
-      //...state, sports: {results: action.sports.response.results}
       ...state, sports: action.sports.response.results
     }
   case actionTypes.UPDATE_POLITICS:

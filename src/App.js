@@ -1,8 +1,6 @@
 import React from 'react';
-import SportsContainer from './containers/sportsContainer';
-import GeneralContainer from './containers/generalContainer';
-import PoliticsContainer from './containers/politicsContainer';
 import storyContainer from './containers/storyContainer';
+import newsContainer from './containers/newsContainer';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './App.css';
@@ -13,10 +11,9 @@ function App() {
   return (
     <Router>
     <div className="App">
+      <Route exact path="/" component={newsContainer} />
       <Route exact path="/story/:id" component={storyContainer} />
-      <div>< PoliticsContainer/></div>
-      <div>< GeneralContainer/></div>
-      <div>< SportsContainer/></div>
+
     </div>
 
   </Router>

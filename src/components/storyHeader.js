@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 function StoryHeader() {
   return(
   <div className="story_header">
-  <p>Return to Headlines</p>
+  <Link to="/">Return to Headlines</Link>
   </div>
 )
 }

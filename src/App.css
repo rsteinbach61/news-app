@@ -49,7 +49,7 @@
 
 .story {
   text-align: left;
-  width: 900px;
+  width: 1000px;
 }
 
 .story_header {
@@ -59,4 +59,8 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.story element {
+  margin-inline-start: 0px;
 }

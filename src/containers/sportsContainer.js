@@ -36,11 +36,9 @@ const mapStateToProps = state => {
 
   const mapDispatchToProps = dispatch => {
     return {
-      //updateSports: () => dispatch({type: actionTypes.UPDATE_SPORTS, value: actionTypes.loadSports() }),
       updateSports: (sports) => dispatch(actionTypes.loadSports(sports)),
   }
 }
-//export default SportsContainer;
 
 export default connect(mapStateToProps, mapDispatchToProps) (SportsContainer);
 
