@@ -13,21 +13,21 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
 
   case actionTypes.UPDATE_SPORTS:
-
     return {
-      ...state, sports: action.sports.response.results
+      ...state, sports: action.sports.response.results, show: true
     }
+
   case actionTypes.UPDATE_POLITICS:
-
     return {
-      ...state, politics: action.politics.response.results
+      ...state, politics: action.politics.response.results, show: true
     }
+
   case actionTypes.UPDATE_WORLD:
     return {
-      ...state, world: action.world.response.results
+      ...state, world: action.world.response.results, show: true
     }
-  case actionTypes.UPDATE_STORY:
 
+  case actionTypes.UPDATE_STORY:
       return {
         ...state, story: action.story.response, show: false
       }

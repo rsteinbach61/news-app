@@ -14,8 +14,6 @@ class NewsContainer extends Component {
 render(){
 return (
   <div>
-  News Container
-
   < GeneralContainer/>
   < SportsContainer/>
   < PoliticsContainer/>
