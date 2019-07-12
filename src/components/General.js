@@ -9,7 +9,7 @@ function General(props){
 
     listLink = props.world.map(function(head) {
 
-      return <p><Link to={{
+      return <p key={head.id}><Link to={{
             pathname: `/story/2}`,
             state: `${head.apiUrl}`
           }}>{head.webTitle}

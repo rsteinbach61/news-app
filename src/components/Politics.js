@@ -9,8 +9,8 @@ function Politics(props){
     //list = props.sports.map(function(head) {return <p> <a href={head.webUrl}>{head.webTitle}</a></p>})
 
     listLink = props.politics.map(function(head) {
-
-      return <p><Link to={{
+    
+      return <p key={head.id}><Link to={{
             pathname: `/story/2}`,
             state: `${head.apiUrl}`
           }}>{head.webTitle}
